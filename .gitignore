@@ -17,10 +17,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
-<<<<<<< HEAD
 .vs
-=======
->>>>>>> parent of 6c5bfd5 (Updates)
 
 npm-debug.log*
 yarn-debug.log*

@@ -1,15 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3cf13eba.css",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "main.js": "/static/js/main.050a583b.js",
-=======
-    "main.js": "/static/js/main.5e392fe3.js",
->>>>>>> d6930ce4e3c487449a24715d9317fa52ae7b44af
-=======
-    "main.js": "/static/js/main.050a583b.js",
->>>>>>> parent of d6930ce (Updates)
     "static/css/64.bba8fa55.chunk.css": "/static/css/64.bba8fa55.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/static/js/64.56dc6704.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/static/css/769.b3cbb36b.chunk.css",
@@ -33,15 +25,7 @@
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.3cf13eba.css.map": "/static/css/main.3cf13eba.css.map",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "main.050a583b.js.map": "/static/js/main.050a583b.js.map",
-=======
-    "main.5e392fe3.js.map": "/static/js/main.5e392fe3.js.map",
->>>>>>> d6930ce4e3c487449a24715d9317fa52ae7b44af
-=======
-    "main.050a583b.js.map": "/static/js/main.050a583b.js.map",
->>>>>>> parent of d6930ce (Updates)
     "64.bba8fa55.chunk.css.map": "/static/css/64.bba8fa55.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/static/js/64.56dc6704.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/static/css/769.b3cbb36b.chunk.css.map",
@@ -49,14 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.3cf13eba.css",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "static/js/main.050a583b.js"
-=======
-    "static/js/main.5e392fe3.js"
->>>>>>> d6930ce4e3c487449a24715d9317fa52ae7b44af
-=======
-    "static/js/main.050a583b.js"
->>>>>>> parent of d6930ce (Updates)
   ]
 }

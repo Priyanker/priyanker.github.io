@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "homepage": "https://priyanker.github.io",
-=======
-  "homepage": "https://developerfolio.js.org/",
->>>>>>> parent of 6c5bfd5 (Updates)
   "name": "developerfolio",
   "version": "0.1.0",
   "private": true,
@@ -11,11 +7,7 @@
     "colorthief": "^2.3.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
-<<<<<<< HEAD
     "gh-pages": "^2.2.0",
-=======
-    "gh-pages": "^2.1.1",
->>>>>>> parent of 6c5bfd5 (Updates)
     "jest-canvas-mock": "^2.3.1",
     "lottie-react": "^2.4.0",
     "react": "^16.10.2",
@@ -30,15 +22,9 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-<<<<<<< HEAD
     "deploy": "gh-pages -b main -d build",
     "start": "node fetch.js && react-scripts start",
     "build": "node fetch.js && react-scripts build",
-=======
-    "start": "node fetch.js && react-scripts start",
-    "build": "node fetch.js && react-scripts build",
-    "deploy": "gh-pages -b master -d build",
->>>>>>> parent of 6c5bfd5 (Updates)
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write \"./**/*.{js,css,json,scss}\"",
