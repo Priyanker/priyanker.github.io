@@ -4,7 +4,9 @@
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
-
+import csharpIcon from './assets/images/icons8-c#-120.png';
+import azureIcon from './assets/images/icons8-azure-120.png';
+import cppIcon from './assets/images/icons8-c++-120.png';
 // Splash Screen
 
 const splashScreen = {
@@ -23,10 +25,10 @@ const greeting = {
   username: "Priyanker",
   title: "Hey all, I'm Priyanker",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "As a Senior Full Stack Developer, my journey in tech has spanned developing robust web solutions across diverse industries. My focus is on crafting resilient APIs and UI interfaces, ensuring they meet the dynamic needs of today's users."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1svzzpCO_DkiV1NSqk3hnlGVFTMAavoUe/view?usp=drive_link", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -47,14 +49,17 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "FULL STACK DEVELOPER WHO WANTS TO PROVIDE AN IMPACT",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ JavaScript and React.js for dynamic and responsive UI/UX design experiences across all devices"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+    emoji("⚡ .NET for powerful server-side programming, SQL and NoSQL databases for data persistence and manipulation"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Microservices architecture with Docker for containerization, enhancing application scalability and deployment efficiency."
+    ),
+    emoji(
+      "⚡ Proficient with Azure for reliable, scalable cloud solutions, and CI/CD pipelines."
     )
   ],
 
@@ -62,6 +67,18 @@ const skillsSection = {
 https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
+    {
+      skillName: "c#",
+      imageSrc: csharpIcon,
+    },
+    {
+      skillName: "azure",
+      imageSrc: azureIcon,
+    },
+    {
+      skillName: "javaScript",
+      fontAwesomeClassname: "fab fa-js"
+    },
     {
       skillName: "html-5",
       fontAwesomeClassname: "fab fa-html5"
@@ -71,28 +88,24 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-css3-alt"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
+      skillName: "less",
+      fontAwesomeClassname: "fab fa-less"
     },
     {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
+      skillName: "angular",
+      fontAwesomeClassname: "fab fa-angular"
     },
     {
       skillName: "reactjs",
       fontAwesomeClassname: "fab fa-react"
     },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
+      skillName: "java",
+      fontAwesomeClassname: "fab fa-java"
     },
     {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      skillName: "c++",
+      imageSrc: cppIcon,
     },
     {
       skillName: "sql-database",
@@ -101,10 +114,6 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "aws",
       fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
     },
     {
       skillName: "python",
@@ -125,22 +134,19 @@ const educationInfo = {
   schools: [
     {
       schoolName: "University of Utah",
-      logo: require("./assets/images/harvardLogo.png"),
+      logo: require("./assets/images/U_medallion_RED_RGB.jpg"),
       subHeader: "Master of Science in Information Systems",
       duration: "August 2023 - August 2024",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      desc: "Engaged in a comprehensive and diverse Information Systems curriculum supplementing technical skills with strategic business acumen",
+      descBullets: ["Graduate Teaching Assistant - Web Based Applications Course"]
     },
     {
       schoolName: "JNTU Hyderabad",
-      logo: require("./assets/images/stanfordLogo.png"),
+      logo: require("./assets/images/JNTU_Hyderabad_logo.png"),
       subHeader: "Bachelor of Technology in Computer Science & Engineering",
       duration: "June 2015 - May 2019",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      desc: "Studied and engaged in multifaceted projects encompassing web development, machine learning, and a spectrum of Computer Science applications.",
+      descBullets: ["Teaching Assistant - Java & Data Structures"]
     }
   ]
 };
@@ -148,7 +154,7 @@ const educationInfo = {
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
+  viewSkillBars: false, //Set it to true to show Proficiency Section
   experience: [
     {
       Stack: "Frontend/Design", //Insert stack or technology you have experience in
@@ -172,30 +178,50 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Senior Software Engineer",
+      company: "Epam Systems",
+      companylogo: require("./assets/images/epam-systems-logos-1.png"),
+      date: "Jan 2021 – Jul 2023",
+      desc: "",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Developed .NET RESTful APIs and Angular UI components for a high-usage wealth management application, significantly increasing user engagement",
+        "Led a successful migration from .NET Framework to .NET Core, enhancing performance and deployment efficiency with Docker containerization",
+        "Recognized for outstanding delivery and project leadership with multiple internal awards"
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Software Engineer",
+      company: "Epam Systems",
+      companylogo: require("./assets/images/epam-systems-logos-1.png"),
+      date: "Aug 2020 – Jan 2021",
+      desc: "",
+      descBullets: [
+        "Improved legacy .NET applications for Electronic Health Records by resolving API and WCF issues, optimizing response times",
+        "Automated new client onboarding processes with Entity Framework migrations, streamlining initial data setup operations"
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
+      role: "Junior Software Engineer",
+      company: "Epam Systems",
+      companylogo: require("./assets/images/epam-systems-logos-1.png"),
+      date: "Jul 2019 – Aug 2020",
+      desc: "",
+      descBullets: [
+        "Contributed to API and UI development for an insurance documents generation portal, incorporating ASP.NET Core and React",
+        "Implemented system-wide logging with Graylog, enhancing application reliability and reducing downtime"
+      ]
+    },
+    {
+      role: "Intern",
+      company: "Epam Systems",
+      companylogo: require("./assets/images/epam-systems-logos-1.png"),
+      date: "Oct 2018 – Jul 2019",
+      desc: "",
+      descBullets: [
+        "Designed an internal chatbot to streamline HR inquiries using ASP.NET Core, Microsoft Bot Framework, and Azure AI Services",
+        "Addressed code quality improvements by resolving numerous code smells and complexities"
+      ]
+    },
   ]
 };
 
@@ -237,7 +263,7 @@ const bigProjects = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
@@ -246,54 +272,40 @@ const bigProjects = {
 const achievementSection = {
   title: emoji("Achievements And Certifications 🏆 "),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "Achievements, Certifications & Award Letters",
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "Microsoft Certified: Azure Fundamentals",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
+        "",
+      image: require("./assets/images/azure-fundamentals-600x600.png"),
       imageAlt: "Google Code-In Logo",
       footerLink: [
         {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+          name: "Certificate",
+          url: "https://drive.google.com/file/d/1W0tLhFAWUKTFd-VqVe7nfZrRMGgPv2VG/view?usp=drive_link"
         },
         {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+          name: "Score Report",
+          url: "https://drive.google.com/file/d/108vxoIosc6xa8bXLimWUoDkgWEGNxDuW/view?usp=drive_link"
         }
       ]
     },
     {
-      title: "Google Assistant Action",
+      title: "Oracle Certified Associate, Java SE 8 Programmer",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
+        "",
+      image: require("./assets/images/OCAJSE8.png"),
       imageAlt: "Google Assistant Action Logo",
       footerLink: [
         {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
-    },
-
-    {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
+          name: "Certificate",
+          url: "https://drive.google.com/file/d/1nnawpZgSGADQcQqZpsbXLGniJqon-X8f/view?usp=drive_link"
+        },
         {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
+          name: "Score Report",
+          url: "https://drive.google.com/file/d/1GB9UpBavfGueXvrxzrEyD4gycuqnLfW7/view?usp=drive_link"
         }
       ]
     }
@@ -318,7 +330,7 @@ const blogSection = {
 const talkSection = {
   title: "TALKS",
   subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
+    "I LOVE TO SHARE KNOWLEDGE"
   ),
 
   talks: [
@@ -329,7 +341,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
