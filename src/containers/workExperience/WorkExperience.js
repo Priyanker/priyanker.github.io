@@ -20,11 +20,13 @@ export default function WorkExperience() {
                     <ExperienceCard
                       key={i}
                       isDark={isDark}
+                      showCompanyInfo={i === 0} // Only the first card will show company info
                       cardInfo={{
-                        company: card.company,
+                        // Only show the company name if it's the first card
+                        company: i === 0 ? card.company : "",
                         desc: card.desc,
                         date: card.date,
-                        companylogo: card.companylogo,
+                        companylogo: i === 0 ? card.companylogo : null, // Only show the logo once
                         role: card.role,
                         descBullets: card.descBullets
                       }}
@@ -38,5 +40,6 @@ export default function WorkExperience() {
       </div>
     );
   }
+
   return null;
 }

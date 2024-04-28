@@ -184,11 +184,12 @@ const workExperiences = {
       date: "Jan 2021 – Jul 2023",
       desc: "",
       descBullets: [
-        "Developed .NET RESTful APIs and Angular UI components for a high-usage wealth management application, significantly increasing user engagement",
+        "Developed .NET RESTful APIs and Angular UI components for a high-usage wealth management application",
         "Led a successful migration from .NET Framework to .NET Core, enhancing performance and deployment efficiency with Docker containerization",
         "Recognized for outstanding delivery and project leadership with multiple internal awards"
       ]
     },
+    
     {
       role: "Software Engineer",
       company: "Epam Systems",
@@ -286,10 +287,6 @@ const achievementSection = {
           name: "Certificate",
           url: "https://drive.google.com/file/d/1W0tLhFAWUKTFd-VqVe7nfZrRMGgPv2VG/view?usp=drive_link"
         },
-        {
-          name: "Score Report",
-          url: "https://drive.google.com/file/d/108vxoIosc6xa8bXLimWUoDkgWEGNxDuW/view?usp=drive_link"
-        }
       ]
     },
     {

@@ -35,3 +35,28 @@
     text-align: center;
   }
 }
+
+.experience-container {
+  position: relative;
+}
+
+.experience-container::after {
+  content: '';
+  position: absolute;
+  width: calc(100% - 40px); /* Adjust width based on your layout */
+  height: 2px;
+  background-color: #fff; /* Or any color that matches your design */
+  top: 50%;
+  left: 20px; /* Or adjust based on your layout */
+  z-index: -1;
+}
+
+.experience-container::before {
+  position: absolute;
+  font-size: 24px; /* Adjust size as needed */
+  color: #fff; /* Or any color that matches your design */
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 10px; /* Adjust based on where you want the arrow to be */
+  z-index: 2;
+}
