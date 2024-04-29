@@ -30,9 +30,12 @@ export default function ExperienceCard({cardInfo, isDark, showCompanyInfo}) {
       : null;
   };
 
+  const experienceBannerEmptyClass = showCompanyInfo ? "" : "experience-banner-empty";
+  const experienceCardEmptyClass = showCompanyInfo ? "" : "experience-card-empty";
+  const experienceCardClass = isDark ? "experience-card-dark" : "experience-card"
   return (
-    <div className={isDark ? "experience-card-dark" : "experience-card"}>
-      <div style={{ background: rgb(colorArrays) }} className="experience-banner">
+    <div className={`${experienceCardClass} ${experienceCardEmptyClass}`}>
+      <div style={{ background: rgb(colorArrays) }} className={`experience-banner ${experienceBannerEmptyClass}`}>
         <div className="experience-blurred_div"></div>
         {showCompanyInfo && (
           <div className="experience-div-company">

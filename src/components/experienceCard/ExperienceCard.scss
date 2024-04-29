@@ -16,6 +16,9 @@
   border: 1px solid $lightBorder1;
 }
 
+.experience-card-empty {
+  border-color: #cfcfcf;
+}
 .experience-card:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
 }
@@ -37,6 +40,9 @@
   justify-content: center;
 }
 
+.experience-banner-empty {
+  background: $darkBackground;
+}
 .experience-blurred_div {
   position: absolute;
   background: $experienceCardBlurredDivLG;
