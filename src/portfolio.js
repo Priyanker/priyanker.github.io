@@ -357,7 +357,7 @@ const podcastSection = {
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
+    "Discuss about an opportunity or want to talk about a project to collaborate on? My Inbox is open for all.",
   number: "+18016083639",
   email_address: "priyankerrao@gmail.com"
 };
