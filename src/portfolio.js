@@ -50,11 +50,11 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I do",
   subTitle: "FULL STACK DEVELOPER WHO WANTS TO PROVIDE AN IMPACT",
-  skills: [
-    emoji(
-      "⚡ JavaScript and React.js for dynamic and responsive UI/UX design experiences across all devices"
-    ),
+  skills: [+
     emoji("⚡ .NET for powerful server-side programming, SQL and NoSQL databases for data persistence and manipulation"),
+    emoji(
+      "⚡ JavaScript and Angular for dynamic and responsive UI/UX design experiences across all devices"
+    ),
     emoji(
       "⚡ Microservices architecture with Docker for containerization, enhancing application scalability and deployment efficiency."
     ),
