@@ -141,7 +141,7 @@ const educationInfo = {
       descBullets: ["Graduate Teaching Assistant - Web Based Applications Course"]
     },
     {
-      schoolName: "JNTU Hyderabad",
+      schoolName: "Jawaharlal Nehru Technological University",
       logo: require("./assets/images/JNTU_Hyderabad_logo.png"),
       subHeader: "Bachelor of Technology in Computer Science & Engineering",
       duration: "June 2015 - May 2019",
