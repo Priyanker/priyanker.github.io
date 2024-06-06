@@ -28,7 +28,7 @@ const greeting = {
     "As a Senior Full Stack Developer, my journey in tech has spanned developing robust web solutions across diverse industries. My focus is on crafting resilient APIs and UI interfaces, ensuring they meet the dynamic needs of today's users."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1svzzpCO_DkiV1NSqk3hnlGVFTMAavoUe/view?usp=drive_link", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1P4nwj0puIvgnZA2lmtc8mUK8vsJwiRlU/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
