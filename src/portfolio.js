@@ -28,7 +28,7 @@ const greeting = {
     "As a Senior Full Stack Developer, my journey in tech has spanned developing robust web solutions across diverse industries. My focus is on crafting resilient APIs and UI interfaces, ensuring they meet the dynamic needs of today's users."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1P4nwj0puIvgnZA2lmtc8mUK8vsJwiRlU/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1UQJyenhcRPaRZUxIfqEz-ZdPCZuc1et-/view?usp=drive_link", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -179,17 +179,28 @@ const workExperiences = {
   experience: [
     {
       role: "Senior Software Engineer",
+      company: "Gallup",
+      companylogo: require("./assets/images/gallup-logos-1.png"),
+      date: "Aug 2024 – Present",
+      desc: "",
+      descBullets: [
+        "Developed a .NET & AWS (Step Functions, Lambda) reporting system, delivering personalized emails to 150K+ users and building supporting React components",
+        "Re-architected a legacy job scheduler to AWS (Step Functions, Batch), cutting compute costs by 35% and saving ~$7K/month",
+        "Optimized high-volume data deletion (MySQL, S3, DynamoDB), slashing 15-hour data purge cycles to under 2 hours while ensuring GDPR compliance"
+      ]
+    },
+    {
+      role: "Senior Software Engineer",
       company: "Epam Systems",
       companylogo: require("./assets/images/epam-systems-logos-1.png"),
       date: "Jan 2021 – Jul 2023",
       desc: "",
       descBullets: [
-        "Developed .NET RESTful APIs and Angular UI components for a high-usage wealth management application",
-        "Led a successful migration from .NET Framework to .NET Core, enhancing performance and deployment efficiency with Docker containerization",
-        "Recognized for outstanding delivery and project leadership with multiple internal awards"
+        "Modernized financial platforms by migrating .NET microservices to Azure (App Services, Functions, API Mgt) with Angular, accelerating deployment by 40% & cutting compute costs by 30%.",
+        "Led .NET Framework to .NET Core migration, improving API performance and reducing deployment times by ~40% using Docker & RabbitMQ.",
+        "Developed a shared Angular component library (Highcharts, Grid.js, SCSS) for real-time data visualization, standardizing UI development"
       ]
     },
-    
     {
       role: "Software Engineer",
       company: "Epam Systems",
@@ -197,30 +208,19 @@ const workExperiences = {
       date: "Aug 2020 – Jan 2021",
       desc: "",
       descBullets: [
-        "Improved legacy .NET applications for Electronic Health Records by resolving API and WCF issues, optimizing response times",
-        "Automated new client onboarding processes with Entity Framework migrations, streamlining initial data setup operations"
+        "Optimized .NET services for an EHR system, migrating critical endpoints to Azure (App Services, SQL), reducing API response times from ~8s to ~3s.",
+        "Integrated MongoDB for user preferences & audit trails, improving UI load times by ~35% and reducing backend SQL query load by 40%."
       ]
     },
     {
       role: "Junior Software Engineer",
       company: "Epam Systems",
       companylogo: require("./assets/images/epam-systems-logos-1.png"),
-      date: "Jul 2019 – Aug 2020",
+      date: "Oct 2018 – Aug 2020",
       desc: "",
       descBullets: [
-        "Contributed to API and UI development for an insurance documents generation portal, incorporating ASP.NET Core and React",
-        "Implemented system-wide logging with Graylog, enhancing application reliability and reducing downtime"
-      ]
-    },
-    {
-      role: "Intern",
-      company: "Epam Systems",
-      companylogo: require("./assets/images/epam-systems-logos-1.png"),
-      date: "Oct 2018 – Jul 2019",
-      desc: "",
-      descBullets: [
-        "Designed an internal chatbot to streamline HR inquiries using ASP.NET Core, Microsoft Bot Framework, and Azure AI Services",
-        "Addressed code quality improvements by resolving numerous code smells and complexities"
+        "Built Angular modules (ngrx, Azure API/Blob caching), boosting UI page load speeds by 35%; enhanced legacy Knockout.js UIs.",
+        "Automated client onboarding with Entity Framework & Azure DevOps CI/CD, reducing manual setup by 70% across 100+ tenants"
       ]
     },
   ]
