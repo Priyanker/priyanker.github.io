@@ -7,7 +7,11 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function WorkExperience() {
   const {isDark} = useContext(StyleContext);
+
   if (workExperiences.display) {
+    // Track companies already shown
+    const shownCompanies = new Set();
+
     return (
       <div id="experience">
         <Fade bottom duration={1000} distance="20px">
@@ -16,17 +20,20 @@ export default function WorkExperience() {
               <h1 className="experience-heading">Experiences</h1>
               <div className="experience-cards-div">
                 {workExperiences.experience.map((card, i) => {
+                  const showCompanyInfo = !shownCompanies.has(card.company);
+                  if (showCompanyInfo) {
+                    shownCompanies.add(card.company);
+                  }
                   return (
                     <ExperienceCard
                       key={i}
                       isDark={isDark}
-                      showCompanyInfo={i === 0 || i == 1} // Only the first card will show company info
+                      showCompanyInfo={showCompanyInfo}
                       cardInfo={{
-                        // Only show the company name if it's the first card
-                        company: i === 0 || i === 1 ? card.company : "",
+                        company: showCompanyInfo ? card.company : "",
                         desc: card.desc,
                         date: card.date,
-                        companylogo: i === 0 || i === 1 ? card.companylogo : null, // Only show the logo once
+                        companylogo: showCompanyInfo ? card.companylogo : null,
                         role: card.role,
                         descBullets: card.descBullets
                       }}
