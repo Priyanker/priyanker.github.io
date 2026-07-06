@@ -1,1 +1,577 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Priyanker's Portfolio</title><meta name="title" content="DeveloperFolio | Developer Portfolio Template"><meta name="description" content="Software Developer Portfolio Template that helps you showcase your work and skills as a software developer"><meta property="og:type" content="website"><meta property="og:url" content="https://developerfolio.js.org/"><meta property="og:title" content="DeveloperFolio | Developer Portfolio Template"><meta property="og:description" content="Software Developer Portfolio Template that helps you showcase your work and skills as a software developer"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://developerfolio.js.org/"><meta property="twitter:title" content="DeveloperFolio | Developer Portfolio Template"><meta property="twitter:description" content="Software Developer Portfolio Template that helps you showcase your work and skills as a software developer"><meta name="msapplication-TileColor" content="#603cba"><meta name="theme-color" content="#6c63ff"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v8=qAJ44G5Bm7"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v8=qAJ44G5Bm7"><link rel="mask-icon" href="/safari-pinned-tab.svg?v8=qAJ44G5Bm7" color="#885bd5"><link rel="shortcut icon" href="/favicon.ico?v8=qAJ44G5Bm7"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v8=qAJ44G5Bm7"><link rel="manifest" href="/manifest.json"/><link rel="preload" href="/static/media/Montserrat-Regular.ee653992.ttf" as="font" type="font/woff" crossorigin><link rel="preload" href="/static/media/Agustina.21f233e1.woff" as="font" type="font/woff" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-6D6H5RDV2M"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-6D6H5RDV2M")</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.4/css/all.min.css"><script defer="defer" src="/static/js/main.11a6c227.js"></script><link href="/static/css/main.9c2007ba.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<!--
+  ────────────────────────────────────────────────────────────
+  PRIYANKER RAO · PORTFOLIO
+  Single-file site. No build step. Drop into repo root as index.html.
+
+  HOW TO EDIT
+  1. Hero text   → search "EDIT-HERO"
+  2. LinkedIn    → search "EDIT-CONTACT" (commented out until you add the URL)
+  3. Skills      → search "EDIT-SKILLS"
+  4. Experience  → edit the <ol class="route"> stops directly
+  ────────────────────────────────────────────────────────────
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priyanker Rao — Software Development Engineer II, Amazon</title>
+<meta name="description" content="T Priyanker Rao — Software Development Engineer II at Amazon Last Mile, building under-the-roof systems for delivery stations. Based in Bellevue, WA. Previously Gallup and EPAM.">
+
+<!-- These icon files already exist in your repo root — links kept intact -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ── Tokens ─────────────────────────────────────────────── */
+:root{
+  --paper:#F3F5F0;        /* cool label-stock */
+  --card:#FFFFFF;
+  --ink:#141B16;          /* evergreen black  */
+  --muted:#5B665E;
+  --line:#D8DDD3;
+  --dash:#C2CABF;
+  --pine:#166B4B;         /* accent           */
+  --signal:#E19E33;       /* current-stop amber, used sparingly */
+  --signal-soft:#F7E7C4;
+  --maxw:1020px;
+  --r:3px;
+  --display:"Barlow Condensed", "Arial Narrow", sans-serif;
+  --body:"IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+*{box-sizing:border-box; margin:0; padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:16.5px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+a{color:var(--pine)}
+a:focus-visible, button:focus-visible{outline:2px solid var(--pine); outline-offset:3px; border-radius:2px}
+::selection{background:var(--signal-soft)}
+
+/* ── Type roles ─────────────────────────────────────────── */
+.eyebrow{
+  font-family:var(--mono); font-size:.72rem; font-weight:500;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--pine);
+}
+.mono{font-family:var(--mono)}
+h1,h2,.stop-role{font-family:var(--display); text-transform:uppercase; line-height:.98}
+
+/* ── Header ─────────────────────────────────────────────── */
+.site-head{border-bottom:1px dashed var(--dash)}
+.site-head .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  padding-top:18px; padding-bottom:18px; gap:16px;
+}
+.wordmark{font-family:var(--mono); font-size:.82rem; letter-spacing:.08em; color:var(--ink); text-decoration:none}
+.wordmark b{color:var(--pine); font-weight:500}
+.site-nav{display:flex; gap:22px}
+.site-nav a{
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--ink); text-decoration:none;
+  border-bottom:1px solid transparent; padding-bottom:2px;
+}
+.site-nav a:hover{border-bottom-color:var(--ink)}
+
+/* ── Hero: the shipping label ───────────────────────────── */
+.hero{padding:72px 0 64px}
+.hero-grid{display:grid; grid-template-columns:1.45fr .85fr; gap:56px; align-items:start}
+
+.hero h1{
+  font-size:clamp(3.1rem, 8.5vw, 5.6rem);
+  font-weight:700; letter-spacing:.005em; margin:10px 0 14px;
+}
+.hero-role{font-size:1.16rem; font-weight:500; max-width:34ch}
+.hero-role span{color:var(--muted); font-weight:400}
+.hero-addr{
+  font-family:var(--mono); font-size:.8rem; letter-spacing:.1em;
+  color:var(--muted); margin-top:14px; text-transform:uppercase;
+}
+.barcode-block{margin-top:34px; max-width:420px}
+.barcode-block svg{display:block; width:100%; height:46px}
+.barcode-cap{
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.34em;
+  text-transform:uppercase; color:var(--muted); margin-top:6px; text-align:center;
+}
+
+.hero-side{display:flex; flex-direction:column; gap:22px}
+.id-card{
+  background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+  padding:12px; width:min(180px,100%); box-shadow:0 1px 0 var(--line);
+}
+.id-card img{display:block; width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:2px; border:1px solid var(--line)}
+.id-card figcaption{font-family:var(--mono); font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-top:9px; text-align:center}
+.hero-intro{color:var(--ink); max-width:38ch}
+.hero-intro a{text-underline-offset:3px}
+
+/* ── Sections ───────────────────────────────────────────── */
+section{padding:60px 0; border-top:1px dashed var(--dash)}
+.sec-head{
+  display:flex; align-items:baseline; justify-content:space-between;
+  gap:16px; margin-bottom:38px;
+}
+.sec-head h2{font-size:clamp(1.55rem, 3vw, 2.05rem); font-weight:600; letter-spacing:.015em}
+.sec-meta{font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); white-space:nowrap}
+
+/* ── The route (experience timeline) ────────────────────── */
+.route{list-style:none; position:relative; margin-left:6px}
+.route::before{
+  content:""; position:absolute; left:5px; top:8px; bottom:8px;
+  border-left:2px dashed var(--dash);
+}
+.stop{position:relative; padding:0 0 44px 34px}
+.stop:last-child{padding-bottom:4px}
+.stop-marker{
+  position:absolute; left:0; top:6px; width:11px; height:11px;
+  background:var(--paper); border:2px solid var(--ink);
+  transform:rotate(45deg);
+}
+.stop.current .stop-marker{background:var(--signal)}
+.stop.current .stop-marker::after{
+  content:""; position:absolute; inset:-7px; border:1px solid var(--signal);
+  animation:pulse 2.2s ease-out infinite;
+}
+@keyframes pulse{
+  0%{transform:scale(.6); opacity:.9}
+  70%{transform:scale(1.5); opacity:0}
+  100%{opacity:0}
+}
+@media (prefers-reduced-motion:reduce){ .stop.current .stop-marker::after{animation:none; display:none} }
+
+.stop-tags{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:8px}
+.chip{
+  font-family:var(--mono); font-size:.64rem; letter-spacing:.12em;
+  text-transform:uppercase; padding:3px 9px; border:1px solid var(--line);
+  border-radius:2px; color:var(--muted); background:var(--card);
+}
+.chip.hot{background:var(--signal-soft); border-color:var(--signal); color:var(--ink)}
+.stop-role{font-size:1.55rem; font-weight:600; letter-spacing:.02em}
+.stop-org{font-weight:500; color:var(--pine); margin-top:2px}
+.stop-desc{color:var(--muted); max-width:56ch; margin-top:8px}
+.stop-points{list-style:none; margin-top:14px; display:flex; flex-direction:column; gap:11px; max-width:62ch}
+.stop-points li{position:relative; padding-left:20px; font-size:.95rem}
+.stop-points li::before{content:""; position:absolute; left:2px; top:9px; width:6px; height:6px; background:var(--pine)}
+
+/* ── Parcels (projects) ─────────────────────────────────── */
+.parcels{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; list-style:none}
+.parcel{
+  background:var(--card); border:1px solid var(--line); border-top:2px solid var(--ink);
+  border-radius:var(--r); padding:24px 22px 20px;
+  display:flex; flex-direction:column; gap:12px;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.parcel:hover{transform:translateY(-3px); box-shadow:0 8px 20px rgba(20,27,22,.08); border-color:#AEB8AC}
+@media (prefers-reduced-motion:reduce){ .parcel, .parcel:hover{transform:none; transition:none} }
+.parcel h3{font-family:var(--display); text-transform:uppercase; font-size:1.28rem; font-weight:600; letter-spacing:.02em}
+.parcel p{color:var(--muted); font-size:.95rem; flex:1}
+.parcel-foot{display:flex; align-items:center; justify-content:space-between; gap:10px; border-top:1px dashed var(--dash); padding-top:14px}
+.lang{display:flex; align-items:center; gap:7px; font-family:var(--mono); font-size:.7rem; letter-spacing:.08em; color:var(--muted)}
+.lang i{width:9px; height:9px; border-radius:50%; display:inline-block}
+.parcel-link{font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; text-decoration:none; color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:1px}
+.parcel-link:hover{color:var(--pine); border-bottom-color:var(--pine)}
+
+/* ── Manifest (skills) ──────────────────────────────────── */
+.manifest{list-style:none; display:flex; flex-direction:column; gap:0}
+.manifest li{
+  display:grid; grid-template-columns:190px 1fr; gap:18px; align-items:baseline;
+  padding:16px 0; border-bottom:1px dashed var(--dash);
+}
+.manifest li:first-child{border-top:1px dashed var(--dash)}
+.man-label{font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+.man-tags{display:flex; flex-wrap:wrap; gap:8px}
+.tag{
+  font-family:var(--mono); font-size:.76rem; padding:5px 11px;
+  background:var(--card); border:1px solid var(--line); border-radius:2px;
+}
+
+/* ── Contact ────────────────────────────────────────────── */
+.contact-lede{font-size:1.25rem; max-width:46ch; margin-bottom:28px}
+.btn-row{display:flex; flex-wrap:wrap; gap:12px}
+.btn{
+  font-family:var(--mono); font-size:.74rem; letter-spacing:.12em; text-transform:uppercase;
+  text-decoration:none; padding:13px 20px; border-radius:2px; border:1px solid var(--ink);
+  color:var(--ink); background:transparent; transition:background .15s ease, color .15s ease;
+}
+.btn:hover{background:var(--ink); color:var(--paper)}
+.btn.primary{background:var(--ink); color:var(--paper)}
+.btn.primary:hover{background:var(--pine); border-color:var(--pine)}
+
+/* ── Footer ─────────────────────────────────────────────── */
+.site-foot{border-top:1px dashed var(--dash); margin-top:20px}
+.site-foot .wrap{
+  display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px;
+  padding-top:26px; padding-bottom:34px;
+  font-family:var(--mono); font-size:.68rem; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted);
+}
+
+/* ── Scroll reveal ──────────────────────────────────────── */
+.reveal{opacity:0; transform:translateY(12px); transition:opacity .5s ease, transform .5s ease}
+.reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){ .reveal{opacity:1; transform:none; transition:none} }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width:820px){
+  .hero{padding:52px 0 48px}
+  .hero-grid{grid-template-columns:1fr; gap:36px}
+  .hero-side{flex-direction:row; align-items:flex-start; flex-wrap:wrap}
+  .parcels{grid-template-columns:1fr}
+  .manifest li{grid-template-columns:1fr; gap:8px; padding:14px 0}
+  .site-nav{gap:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="#top">PRIYANKER<b>.GITHUB.IO</b></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="#experience">Route</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ═══ HERO · the shipping label ═══ -->
+  <section class="hero" aria-label="Introduction" style="border-top:none">
+    <div class="wrap hero-grid">
+
+      <div>
+        <!-- EDIT-HERO: coordinates + city -->
+        <p class="eyebrow">Ship to · 47.6101° N, 122.2015° W</p>
+        <h1>T Priyanker<br>Rao</h1>
+        <p class="hero-role">Software Development Engineer II <span>— Amazon, Last&nbsp;Mile Delivery</span></p>
+        <p class="hero-addr">Bellevue · Washington · United States</p>
+
+        <div class="barcode-block" aria-hidden="true">
+          <svg id="barcode" role="img" preserveAspectRatio="none"></svg>
+          <p class="barcode-cap">Priyanker Rao</p>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <figure class="id-card">
+          <img src="https://avatars.githubusercontent.com/u/14792786?u=e9e86bade7d63b39c460fe2ce82cb55a1c9ec82f&v=4"
+               alt="Portrait of Priyanker Rao" loading="lazy"
+               onerror="this.closest('.id-card').style.display='none'">
+          <figcaption>ID · Priyanker</figcaption>
+        </figure>
+        <!-- EDIT-HERO: intro paragraph -->
+        <p class="hero-intro">
+          I build the “under the roof” systems inside Amazon delivery
+          stations — the software associates rely on to move every package
+          through the building, whether the network is up or not. The route
+          here ran through EPAM in Hyderabad, grad school at Utah, and Gallup.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE · the route ═══ -->
+  <section id="experience" aria-labelledby="exp-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Route history</p>
+          <h2 id="exp-h">Experience</h2>
+        </div>
+        <p class="sec-meta">5 stops · Hyderabad → Bellevue</p>
+      </div>
+
+      <ol class="route">
+
+        <li class="stop current reveal">
+          <span class="stop-marker" aria-hidden="true"></span>
+          <div class="stop-tags">
+            <span class="chip hot">Current stop</span>
+            <span class="chip">Jun 2025 — Present</span>
+            <span class="chip">Bellevue, WA</span>
+          </div>
+          <h3 class="stop-role">Software Development Engineer II</h3>
+          <p class="stop-org">Amazon · Last Mile, Under the Roof</p>
+          <p class="stop-desc">I build the systems that run inside delivery
+          stations — the software associates depend on to keep every package
+          moving through the building.</p>
+          <ul class="stop-points">
+            <li>Built the offline mode for the delivery-station associate app,
+            keeping all critical process paths running through network outages
+            and system failures — protecting ~1.3M packages a year from missing
+            their delivery promise.</li>
+            <li>Cut mean time to resolution for high-severity tickets from hours
+            or days to minutes with an AI on-call orchestration platform:
+            service-specific skill files and agent specs that triage issues,
+            route them to the right engineer's Slack, and execute the dispatched
+            fixes. Saves ~15 on-call hours a week, now spreading org-wide with
+            adoption requests from other Amazon orgs.</li>
+            <li>Hardened monitoring and resilience across station systems to
+            surface hard-to-detect anomalies and catch disruptions before they
+            escalate into business impact for delivery stations.</li>
+          </ul>
+        </li>
+
+        <li class="stop reveal">
+          <span class="stop-marker" aria-hidden="true"></span>
+          <div class="stop-tags">
+            <span class="chip">Aug 2024 — May 2025</span>
+            <span class="chip">Omaha, NE</span>
+          </div>
+          <h3 class="stop-role">Senior Software Engineer</h3>
+          <p class="stop-org">Gallup</p>
+          <p class="stop-desc">Led the Team Participation Reporting system on
+          .NET and AWS (Step Functions, Lambda, DynamoDB), serving engagement
+          metrics to 150K+ users worldwide — and re-architected a legacy Windows
+          job scheduler into a Dockerized AWS Batch pipeline, cutting compute
+          costs 35%.</p>
+        </li>
+
+        <li class="stop reveal">
+          <span class="stop-marker" aria-hidden="true"></span>
+          <div class="stop-tags">
+            <span class="chip">Aug 2023 — Jul 2024</span>
+            <span class="chip">Salt Lake City, UT</span>
+          </div>
+          <h3 class="stop-role">M.S., Information Systems</h3>
+          <p class="stop-org">University of Utah</p>
+          <p class="stop-desc">Graduated with a 4.0 GPA.</p>
+        </li>
+
+        <li class="stop reveal">
+          <span class="stop-marker" aria-hidden="true"></span>
+          <div class="stop-tags">
+            <span class="chip">Oct 2018 — Jul 2023</span>
+            <span class="chip">Hyderabad, India</span>
+          </div>
+          <h3 class="stop-role">Senior Software Engineer</h3>
+          <p class="stop-org">EPAM Systems</p>
+          <p class="stop-desc">Joined as an intern, left as a senior engineer.
+          Led .NET Framework → .NET Core migrations with Docker (40% faster
+          deployments), halved patient-retrieval latency in an EHR system, and
+          shipped REST APIs and Angular dashboards that grew active users
+          by 50K+.</p>
+        </li>
+
+        <li class="stop reveal">
+          <span class="stop-marker" aria-hidden="true"></span>
+          <div class="stop-tags">
+            <span class="chip">Origin</span>
+            <span class="chip">2015 — 2019</span>
+            <span class="chip">Hyderabad, India</span>
+          </div>
+          <h3 class="stop-role">B.Tech, Computer Science</h3>
+          <p class="stop-org">Jawaharlal Nehru Technological University</p>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS · parcels ═══ -->
+  <section id="projects" aria-labelledby="proj-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Manifest · packages</p>
+          <h2 id="proj-h">Projects</h2>
+        </div>
+        <p class="sec-meta">3 packages · github.com/Priyanker</p>
+      </div>
+
+      <ul class="parcels">
+
+        <li class="parcel reveal">
+          <h3>FinanceBot</h3>
+          <p>A finance chatbot built with Microsoft Bot Framework and LUIS —
+          natural-language Q&amp;A over financial tasks.</p>
+          <div class="parcel-foot">
+            <span class="lang"><i style="background:#178600"></i>C#</span>
+            <a class="parcel-link" href="https://github.com/Priyanker/FinanceBot">View repo ↗</a>
+          </div>
+        </li>
+
+        <li class="parcel reveal">
+          <h3>Weather-Based Movie Recommender</h3>
+          <p>A data-engineering project that pairs live weather conditions with
+          personalized movie recommendations.</p>
+          <div class="parcel-foot">
+            <span class="lang"><i style="background:#3572A5"></i>Python</span>
+            <a class="parcel-link" href="https://github.com/Priyanker/DataEngineeringProject">View repo ↗</a>
+          </div>
+        </li>
+
+        <li class="parcel reveal">
+          <h3>MyOpenCV</h3>
+          <p>A collection of computer-vision experiments and projects built
+          with OpenCV.</p>
+          <div class="parcel-foot">
+            <span class="lang"><i style="background:#b07219"></i>Java</span>
+            <a class="parcel-link" href="https://github.com/Priyanker/MyOpenCV">View repo ↗</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ TOOLKIT · manifest ═══ -->
+  <section id="toolkit" aria-labelledby="kit-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Contents declared</p>
+          <h2 id="kit-h">Toolkit</h2>
+        </div>
+      </div>
+
+      <!-- EDIT-SKILLS: adjust freely -->
+      <ul class="manifest">
+        <li>
+          <span class="man-label">Languages</span>
+          <span class="man-tags">
+            <span class="tag">C# / .NET Core</span><span class="tag">Python</span>
+            <span class="tag">Java</span><span class="tag">TypeScript</span>
+            <span class="tag">SQL</span>
+          </span>
+        </li>
+        <li>
+          <span class="man-label">Cloud &amp; architecture</span>
+          <span class="man-tags">
+            <span class="tag">AWS Lambda</span><span class="tag">Step Functions</span>
+            <span class="tag">SQS / SNS</span><span class="tag">DynamoDB</span>
+            <span class="tag">Timestream</span><span class="tag">ECS Fargate</span>
+            <span class="tag">EventBridge</span><span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span><span class="tag">Event-driven architecture</span>
+          </span>
+        </li>
+        <li>
+          <span class="man-label">Data &amp; storage</span>
+          <span class="man-tags">
+            <span class="tag">SQL Server</span><span class="tag">MySQL</span>
+            <span class="tag">MongoDB</span><span class="tag">Redis</span>
+            <span class="tag">Entity Framework</span><span class="tag">Dapper</span>
+          </span>
+        </li>
+        <li>
+          <span class="man-label">Frontend</span>
+          <span class="man-tags">
+            <span class="tag">Angular</span><span class="tag">React</span>
+            <span class="tag">HTML5 / CSS3</span>
+          </span>
+        </li>
+        <li>
+          <span class="man-label">Certifications</span>
+          <span class="man-tags">
+            <span class="tag">Azure Developer Associate (AZ-204)</span>
+            <span class="tag">Azure Fundamentals (AZ-900)</span>
+            <span class="tag">Oracle Certified Java Programmer</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" aria-labelledby="con-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Delivery instructions</p>
+          <h2 id="con-h">Get in touch</h2>
+        </div>
+      </div>
+
+      <p class="contact-lede">The fastest routes to me are below. Open to good
+      conversations about distributed systems, logistics tech, and side projects.</p>
+
+      <div class="btn-row">
+        <a class="btn primary" href="mailto:priyankerrao@gmail.com">Email</a>
+        <a class="btn" href="https://github.com/Priyanker">GitHub</a>
+        <a class="btn" href="https://medium.com/@priyankerrao">Medium</a>
+        <!-- EDIT-CONTACT: uncomment and add your public LinkedIn URL
+        <a class="btn" href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a>
+        -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> T Priyanker Rao</span>
+    <span>Origin: Hyderabad → Current: Bellevue, WA</span>
+    <span>Delivered via GitHub Pages</span>
+  </div>
+</footer>
+
+<script>
+/* ── Code 39 barcode of the name (genuinely scannable) ──── */
+(function(){
+  var MAP = {
+    "A":"100001001","B":"001001001","C":"101001000","D":"000011001",
+    "E":"100011000","F":"001011000","G":"000001101","H":"100001100",
+    "I":"001001100","J":"000011100","K":"100000011","L":"001000011",
+    "M":"101000010","N":"000010011","O":"100010010","P":"001010010",
+    "Q":"000000111","R":"100000110","S":"001000110","T":"000010110",
+    "U":"110000001","V":"011000001","W":"111000000","X":"010010001",
+    "Y":"110010000","Z":"011010000"," ":"011000100","-":"010000101",
+    ".":"110000100","*":"010010100",
+    "0":"000110100","1":"100100001","2":"001100001","3":"101100000",
+    "4":"000110001","5":"100110000","6":"001110000","7":"000100101",
+    "8":"100100100","9":"001100100"
+  };
+  var svg = document.getElementById("barcode");
+  if(!svg) return;
+  var text = "*PRIYANKER*", N = 2, W = 5, H = 46, x = 0, bars = [];
+  for(var c = 0; c < text.length; c++){
+    var pat = MAP[text[c]]; if(!pat) continue;
+    for(var i = 0; i < 9; i++){
+      var w = pat[i] === "1" ? W : N;
+      if(i % 2 === 0) bars.push('<rect x="'+x+'" y="0" width="'+w+'" height="'+H+'"/>');
+      x += w;
+    }
+    x += N; /* inter-character gap */
+  }
+  svg.setAttribute("viewBox", "0 0 " + x + " " + H);
+  svg.innerHTML = '<g fill="#141B16">' + bars.join("") + "</g>";
+})();
+
+/* ── Scroll reveal (tracking updates loading in) ────────── */
+(function(){
+  var els = document.querySelectorAll(".reveal");
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)){
+    els.forEach(function(el){ el.classList.add("in"); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
